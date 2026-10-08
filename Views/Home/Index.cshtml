@@ -1,0 +1,9 @@
+﻿@model Usuario
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bem-vindo@(Model != null ? $" , {Model.Nome}" : "")!</h1>
+    <p>Comece a utilizar a aplicação.</p>
+</div>
