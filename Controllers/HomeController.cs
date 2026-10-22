@@ -1,22 +1,14 @@
-using EnvioEmail.Models;
-using EnvioEmail.Repository;
 using Microsoft.AspNetCore.Mvc;
+using ProjetoCadastroMVC.Models;
 using System.Diagnostics;
 
-namespace EnvioEmail.Controllers
+namespace ProjetoCadastroMVC.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IUsuarioRepository usuarioRepository;
-        public HomeController(IUsuarioRepository userRep)
-        {
-            usuarioRepository = userRep;
-        }
         public IActionResult Index()
         {
-            int usuarioId = HttpContext.Session.GetInt32("UsuarioId")!.Value;
-            Usuario? usuario = usuarioRepository.BuscarPorId(usuarioId);
-            return View(usuario);
+            return View();
         }
 
         public IActionResult Privacy()

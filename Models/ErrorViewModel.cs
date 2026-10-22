@@ -1,4 +1,4 @@
-namespace EnvioEmail.Models
+namespace ProjetoCadastroMVC.Models
 {
     public class ErrorViewModel
     {

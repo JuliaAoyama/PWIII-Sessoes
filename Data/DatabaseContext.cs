@@ -1,13 +1,13 @@
-﻿using EnvioEmail.Models;
+﻿
 using Microsoft.EntityFrameworkCore;
+using ProjetoCadastroMVC.Models;
 
-namespace EnvioEmail.Data
+namespace ProjetoCadastroMVC.Data
 {
     public class DatabaseContext : DbContext
     {
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options) { }
 
-        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Funcionario> Funcionarios { get; set; }
     }
-    
 }
